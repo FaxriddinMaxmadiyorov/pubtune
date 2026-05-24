@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+ */
+
+ :root {
+  --bg-primary:   #0d0d0d;
+  --bg-secondary: #141414;
+  --bg-card:      #1a1a1a;
+  --bg-hover:     #222222;
+  --accent:       #00d26a;
+  --accent-dim:   #00d26a22;
+  --text-primary: #f0f0f0;
+  --text-muted:   #666;
+  --border:       #2a2a2a;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Syne', sans-serif;
+  min-height: 100vh;
+}
+
+.card-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #000 !important;
+  border: none;
+  font-weight: 700;
+}
+
+.btn-accent:hover {
+  background: #00e876;
+}
