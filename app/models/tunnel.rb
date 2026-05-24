@@ -13,6 +13,6 @@ class Tunnel < ApplicationRecord
   end
 
   def generate_subdomain
-    self.subdomain ||= SecureRandom.alphanumeric(8).downcase
+    self.subdomain = SecureRandom.alphanumeric(8).downcase
   end
 end

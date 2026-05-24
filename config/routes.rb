@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "dashboard#index"
   resources :tunnels, only: %i[ index show create destroy ]
+  get "/ws", to: "tunnel_websocket#connect"
+  match "*path", to: "tunnel_websocket#forward", via: :all, constraints: ->(req) {
+    req.host.end_with?(".localhost") || req.host.end_with?(".pubtune.io")
+  }
 end
