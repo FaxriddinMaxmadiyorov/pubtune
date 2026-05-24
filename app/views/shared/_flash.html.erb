@@ -1,0 +1,12 @@
+<div class="flash-container">
+  <% if flash[:notice] %>
+    <div class="flash-msg notice" id="flashNotice">
+      <i class="bi bi-check-circle me-2" style="color: var(--accent)"></i><%= flash[:notice] %>
+    </div>
+  <% end %>
+  <% if flash[:alert] %>
+    <div class="flash-msg alert-msg" id="flashAlert">
+      <i class="bi bi-exclamation-circle me-2" style="color: #ff4d4d"></i><%= flash[:alert] %>
+    </div>
+  <% end %>
+</div>

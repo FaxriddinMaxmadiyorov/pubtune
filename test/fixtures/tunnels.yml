@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  subdomain: MyString
+  local_port: 1
+  status: MyString
+  token: MyString
+
+two:
+  user: two
+  name: MyString
+  subdomain: MyString
+  local_port: 1
+  status: MyString
+  token: MyString

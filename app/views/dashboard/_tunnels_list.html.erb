@@ -1,0 +1,51 @@
+<div class="card-dark">
+  <% if @tunnels.empty? %>
+    <div class="text-center py-5">
+      <i class="bi bi-diagram-3 mb-3" style="font-size: 2.5rem; color: var(--text-muted); display: block;"></i>
+      <p style="color: var(--text-muted); font-size: 0.9rem;">Hali tunnel yo'q</p>
+      <button class="btn btn-accent btn-sm" data-bs-toggle="modal" data-bs-target="#newTunnelModal">
+        <i class="bi bi-plus-lg me-1"></i>Birinchi tunnelni yarating
+      </button>
+    </div>
+  <% else %>
+    <table class="table mb-0">
+      <thead>
+        <tr class="table-thead">
+          <th>Nom</th>
+          <th>Subdomain</th>
+          <th>Port</th>
+          <th>Holat</th>
+          <th>Amal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @tunnels.each do |tunnel| %>
+          <tr class="table-row">
+            <td class="table-cell fw-600"><%= tunnel.name %></td>
+            <td class="table-cell">
+              <span class="tunnel-url"><%= tunnel.subdomain %>.pubtune.io</span>
+            </td>
+            <td class="table-cell mono"><%= tunnel.local_port %></td>
+            <td class="table-cell">
+              <% if tunnel.active? %>
+                <span class="status-badge status-active">
+                  <span class="status-dot"></span>Aktiv
+                </span>
+              <% else %>
+                <span class="status-badge status-inactive">Nofaol</span>
+              <% end %>
+            </td>
+            <td class="table-cell">
+              <%= link_to tunnel_path(tunnel), class: "btn-icon me-1" do %>
+                <i class="bi bi-eye"></i>
+              <% end %>
+              <%= link_to tunnel_path(tunnel), data: { turbo_method: :delete, turbo_confirm: "O'chirishni tasdiqlaysizmi?" }, class: "btn-icon btn-icon-danger" do %>
+                <i class="bi bi-trash"></i>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>

@@ -44,3 +44,217 @@ body {
 .btn-accent:hover {
   background: #00e876;
 }
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 1rem;
+}
+
+.auth-logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.8rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.auth-subtitle {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-top: 0.3rem;
+}
+
+.auth-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+}
+
+.auth-label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  display: block;
+}
+
+.auth-input {
+  background: var(--bg-hover) !important;
+  border-color: var(--border) !important;
+  color: var(--text-primary) !important;
+  font-size: 0.88rem;
+}
+
+.auth-input:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px var(--accent-dim) !important;
+}
+
+.auth-input-addon {
+  background: var(--bg-hover) !important;
+  border-color: var(--border) !important;
+  color: var(--text-muted) !important;
+}
+
+.auth-eye-btn {
+  cursor: pointer;
+}
+
+.auth-checkbox {
+  background-color: var(--bg-hover);
+  border-color: var(--border);
+  cursor: pointer;
+}
+
+.auth-checkbox:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.auth-remember-label {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.auth-links {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+
+.auth-link-muted {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.83rem;
+}
+
+.auth-link-accent {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-switch {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.auth-hint {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.page-title {
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.stat-label {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-top: 0.2rem;
+}
+
+.table-thead th {
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-color: var(--border);
+  padding: 0.75rem 1rem;
+}
+
+.table-row {
+  border-color: var(--border);
+  transition: background 0.15s;
+}
+
+.table-row:hover {
+  background: var(--bg-hover) !important;
+}
+
+.table-cell {
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  padding: 0.85rem 1rem;
+  border-color: var(--border);
+  vertical-align: middle;
+}
+
+.fw-600 { font-weight: 600; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+
+.tunnel-url {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  color: var(--accent);
+}
+
+.status-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.status-active {
+  background: #00d26a22;
+  color: #00d26a;
+  border: 1px solid #00d26a44;
+}
+
+.status-inactive {
+  background: #66666622;
+  color: #666;
+  border: 1px solid #66666644;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d26a;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.btn-icon {
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  transition: all 0.15s;
+  display: inline-flex;
+}
+
+.btn-icon:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.btn-icon-danger:hover {
+  background: #ff4d4d22;
+  color: #ff4d4d;
+}
