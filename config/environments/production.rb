@@ -90,4 +90,11 @@ Rails.application.configure do
   config.logger = ActiveSupport::TaggedLogging.new(
     Logger.new(Rails.root.join("log/production.log"))
   )
+
+  config.hosts << /.*\.localhost/
+  config.hosts << "136.111.37.166"
+
+  config.hosts << "mfakhriddin.uz"
+  config.hosts << "www.mfakhriddin.uz"
+  config.hosts << /.*\.mfakhriddin\.uz/
 end

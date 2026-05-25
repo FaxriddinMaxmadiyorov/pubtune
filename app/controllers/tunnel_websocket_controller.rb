@@ -1,6 +1,5 @@
 class TunnelWebsocketController < ActionController::Base
   skip_before_action :verify_authenticity_token
-#   skip_before_action :authenticate_user!, only: %i[connect forward]
 
   def connect
     if Faye::WebSocket.websocket?(request.env)
@@ -78,7 +77,7 @@ class TunnelWebsocketController < ActionController::Base
       end
 
       headers.each { |k, v| response.set_header(k, v) }
-      render plain: response_data["body"], status: response_data["status"]
+      render plain: Base64.strict_decode64(response_data["body"]), status: response_data["status"]
     else
       render plain: "Gateway Timeout", status: 504
     end

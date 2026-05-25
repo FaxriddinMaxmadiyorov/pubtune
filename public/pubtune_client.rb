@@ -13,7 +13,7 @@ end.parse!
 
 TOKEN      = options[:token]  || ENV["PUBTUNE_TOKEN"]
 LOCAL_PORT = options[:port]   || 3000
-SERVER_URL = options[:server] || "wss://pubtune.io/ws"
+SERVER_URL = options[:server] || "wss://mfakhriddin.uz/ws"
 
 abort "Token kerak! --token TOKEN" unless TOKEN
 
@@ -66,7 +66,7 @@ class PubtuneClient
     case data["type"]
     when "auth_ok"
       puts "\e[32m[Pubtune]\e[0m Muvaffaqiyatli ulandi!"
-      puts "\e[32m[Pubtune]\e[0m Public URL: \e[1mhttp://#{data['subdomain']}.pubtune.io\e[0m"
+      puts "\e[32m[Pubtune]\e[0m Public URL: \e[1mhttp://#{data['subdomain']}.mfakhriddin.uz\e[0m"
       puts "\e[32m[Pubtune]\e[0m Local:      \e[1mhttp://localhost:#{@local_port}\e[0m"
       puts "\e[90m─────────────────────────────────────────\e[0m"
 
@@ -91,7 +91,7 @@ class PubtuneClient
           request_id: data["request_id"],
           status:     response[:status],
           headers:    response[:headers],
-          body:       response[:body],
+          body: Base64.strict_encode64(response[:body]),
         }))
       rescue => e
         puts "\e[31m[Pubtune]\e[0m Request xatolik: #{e.message}"
@@ -137,7 +137,7 @@ class PubtuneClient
     {
       status:  response.code.to_i,
       headers: headers,
-      body:    response.body.to_s,
+      body: Base64.strict_encode64(response.body.to_s),
     }
   end
 end

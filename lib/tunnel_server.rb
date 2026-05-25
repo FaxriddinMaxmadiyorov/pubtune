@@ -91,7 +91,7 @@ class TunnelServer
 
   def tunnel_request?(env)
     host = env["HTTP_HOST"].to_s
-    host.end_with?(".pubtune.io") || host.include?(".localhost")
+    host.end_with?(".mfakhriddin.uz") || host.include?(".localhost")
   end
 
   def extract_subdomain(env)
