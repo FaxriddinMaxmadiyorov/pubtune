@@ -21,4 +21,5 @@ Rails.application.routes.draw do
     req.host.end_with?(".localhost") || req.host.end_with?(".mfakhriddin.uz")
   }
   devise_for :users
+  get '/my-cv', to: 'pages#my_cv', as: :my_cv
 end

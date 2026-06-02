@@ -1,0 +1,147 @@
+<div class="my-cv">
+  <style>
+    .my-cv *, .my-cv *::before, .my-cv *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .my-cv {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #111;
+      background: #fff;
+      max-width: 780px;
+      margin: 48px auto;
+      padding: 0 32px 64px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .my-cv .cv-header { border-bottom: 0.5px solid #ccc; padding-bottom: 1.5rem; margin-bottom: 1.5rem; }
+    .my-cv .cv-name { font-family: 'Playfair Display', serif; font-size: 34px; font-weight: 500; letter-spacing: -0.5px; margin-bottom: 6px; color: #000; }
+    .my-cv .cv-contact { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+    .my-cv .cv-contact a { font-size: 13px; color: #111; font-weight: 600; text-decoration: none; }
+    .my-cv .cv-contact a:hover { text-decoration: underline; }
+    .my-cv .cv-summary { font-size: 13.5px; color: #111; line-height: 1.7; margin-top: 12px; max-width: 640px; font-weight: 500; }
+
+    .my-cv .section { margin-bottom: 2rem; }
+    .my-cv .section-title { font-size: 10.5px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: #444; margin-bottom: 12px; padding-bottom: 6px; border-bottom: 0.5px solid #ccc; }
+
+    .my-cv .skills-row { display: flex; flex-direction: column; gap: 6px; }
+    .my-cv .skill-line { display: flex; font-size: 13px; gap: 8px; }
+    .my-cv .skill-label { color: #333; font-weight: 600; min-width: 190px; flex-shrink: 0; }
+    .my-cv .skill-val { color: #111; font-weight: 500; }
+
+    .my-cv .job { margin-bottom: 1.5rem; }
+    .my-cv .job-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; margin-bottom: 4px; }
+    .my-cv .job-title { font-size: 14.5px; font-weight: 600; color: #000; }
+    .my-cv .job-meta { font-size: 12.5px; color: #333; margin-top: 2px; font-weight: 500; }
+    .my-cv .job-date { font-size: 12px; color: #333; white-space: nowrap; font-weight: 500; }
+    .my-cv .job-bullets { list-style: none; margin-top: 8px; }
+    .my-cv .job-bullets li { font-size: 13px; color: #111; line-height: 1.65; padding: 2px 0 2px 16px; position: relative; font-weight: 500; }
+    .my-cv .job-bullets li::before { content: '–'; position: absolute; left: 0; color: #666; }
+
+    .my-cv .edu-row { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 4px; }
+    .my-cv .edu-title { font-size: 14.5px; font-weight: 600; color: #000; }
+    .my-cv .edu-sub { font-size: 13px; color: #333; margin-top: 2px; font-weight: 500; }
+    .my-cv .edu-date { font-size: 12px; color: #333; white-space: nowrap; font-weight: 500; }
+
+    .my-cv .award-item { font-size: 13px; color: #111; font-weight: 500; padding: 4px 0; display: flex; align-items: center; gap: 8px; }
+    .my-cv .award-item::before { content: '★'; font-size: 10px; color: #555; }
+  </style>
+
+  <%= stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@500;600&display=swap" %>
+
+  <div class="cv-header">
+    <h1 class="cv-name">Fakhriddin Makhmadiyorov</h1>
+    <div class="cv-contact">
+      <a href="mailto:makhmadiyorovfakhriddin@gmail.com">makhmadiyorovfakhriddin@gmail.com</a>
+      <a href="https://linkedin.com/in/makhmadiyorov-f" target="_blank">linkedin.com/in/makhmadiyorov-f</a>
+    </div>
+    <p class="cv-summary">Backend-focused Software Engineer with 5 years of commercial experience building and scaling Ruby on Rails applications. Specializes in payment systems integration (Stripe, PayPal, Machnet), performance optimization, and high-availability backend infrastructure. Active open source contributor with 500K+ installs.</p>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Technical skills</p>
+    <div class="skills-row">
+      <div class="skill-line"><span class="skill-label">Languages &amp; frameworks</span><span class="skill-val">Ruby, Ruby on Rails, JavaScript (Vue.js, React), HTML/CSS</span></div>
+      <div class="skill-line"><span class="skill-label">Databases &amp; storage</span><span class="skill-val">PostgreSQL, MongoDB, Redis, Elasticsearch</span></div>
+      <div class="skill-line"><span class="skill-label">Infrastructure &amp; tools</span><span class="skill-val">AWS, Docker, NGINX, GitLab/GitHub CI/CD, RabbitMQ, Sidekiq, Capistrano</span></div>
+      <div class="skill-line"><span class="skill-label">APIs &amp; protocols</span><span class="skill-val">REST, GraphQL, JSON-RPC, SOAP, Action Cable, WebSockets</span></div>
+      <div class="skill-line"><span class="skill-label">Testing</span><span class="skill-val">RSpec (unit, integration, system specs), Cypress</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Experience</p>
+
+    <div class="job">
+      <div class="job-header">
+        <div><p class="job-title">Software Engineer</p><p class="job-meta">The Access Group · via Gotoinc · UK, Remote</p></div>
+        <p class="job-date">Aug 2024 – Present</p>
+      </div>
+      <ul class="job-bullets">
+        <li>Managed Capistrano deployments across a 4-server AWS infrastructure with role-separated nodes: web, webhooks, and Sidekiq worker, each with tuned Puma configurations.</li>
+        <li>Improved test coverage in a large-scale Rails codebase (1,240+ files, 31,500+ lines) with unit, integration, and system specs.</li>
+        <li>Optimized SQL queries 28× for enhanced performance; resolved N+1 patterns using EXPLAIN ANALYZE, reducing p95 response times on high-traffic endpoints.</li>
+        <li>Contributed to Rails and Vue.js major version migration strategies, analyzing breaking changes and coordinating incremental rollout.</li>
+        <li>Reviewed 400+ pull requests including critical Rails and Vue.js major version migrations.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div><p class="job-title">Software Engineer</p><p class="job-meta">Uzrek Payment Systems · upay.net · US, Remote</p></div>
+        <p class="job-date">May 2022 – Aug 2024</p>
+      </div>
+      <ul class="job-bullets">
+        <li>Designed and developed a secure peer-to-peer transaction system (Machnet, Stripe, PayPal).</li>
+        <li>Resolved a critical race condition by implementing database-level locking, preventing data inconsistencies and revenue loss.</li>
+        <li>Developed a chat microservice using Action Cable and Sidekiq for real-time communication.</li>
+        <li>Implemented GitLab CI/CD pipelines, resulting in a 25% increase in team performance.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div><p class="job-title">Software Engineer</p><p class="job-meta">upaytravels · US, Remote</p></div>
+      </div>
+      <ul class="job-bullets">
+        <li>Designed CRM system architecture for internal use by airline operators.</li>
+        <li>Containerized the application using Docker; applied rate limiting and IP blacklisting for security.</li>
+        <li>Used Redis to cache frequently accessed data and improve performance.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div><p class="job-title">Software Engineer</p><p class="job-meta">DK-KLUB · US, Remote</p></div>
+        <p class="job-date">Sep 2021 – Apr 2022</p>
+      </div>
+      <ul class="job-bullets">
+        <li>Led development of MVP for an online travel agency serving 15,000+ users.</li>
+        <li>Integrated 3 payment systems using REST, JSON-RPC and SOAP protocols.</li>
+        <li>Developed REST API for a mobile application that increased bookings by 25%.</li>
+        <li>Upgraded Rails 6.x to 7.x; optimized SQL queries, improving page loading times by 30%.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Education</p>
+    <div class="edu-row">
+      <div><p class="edu-title">Tashkent University of Information Technologies</p><p class="edu-sub">Bachelor of Arts in Computer Science</p></div>
+      <p class="edu-date">Sep 2018 – Jun 2022</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Awards &amp; achievements</p>
+    <div class="award-item">Ranked TOP 10 in ACM ICPC Qualifications 2021</div>
+    <div class="award-item">Next Generation: II place winner</div>
+    <div class="award-item">AI Hack hackathon winner, 2025</div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Languages</p>
+    <p style="font-size:13px; color:#111; font-weight:500;">Russian — Intermediate</p>
+  </div>
+</div>
