@@ -53,16 +53,16 @@
   <div class="cv-header">
     <h1 class="cv-name">Fakhriddin Makhmadiyorov</h1>
     <div class="cv-contact">
-      <a href="mailto:makhmadiyorovfakhriddin@gmail.com">makhmadiyorovfakhriddin@gmail.com</a>
-      <a href="https://linkedin.com/in/makhmadiyorov-f" target="_blank">linkedin.com/in/makhmadiyorov-f</a>
+      <a href="mailto:makhmadiyorovfakhriddindaad@gmail.com">makhmadiyorovfakhriddindaad@gmail.com</a>
+      <a href="https://linkedin.com/in/makhmadiyorov-fakh" target="_blank">linkedin.com/in/makhmadiyorov-fakh</a>
     </div>
-    <p class="cv-summary">Backend-focused Software Engineer with 5 years of commercial experience building and scaling Ruby on Rails applications. Specializes in payment systems integration (Stripe, PayPal, Machnet), performance optimization, and high-availability backend infrastructure. Active open source contributor with 500K+ installs.</p>
+    <p class="cv-summary">Backend-focused Software Engineer with 7 years of commercial experience building scalable Ruby on Rails applications for fintech, SaaS, travel, and education platforms. Experienced in system design, distributed backend architecture, payment systems integration, PostgreSQL performance optimization, and scalable application development. Strong understanding of data structures, algorithms, and software design principles. Open source Ruby contributor (600K+ installs). Toptal member. Available for B2B contracts with companies in Georgia.</p>
   </div>
 
   <div class="section">
     <p class="section-title">Technical skills</p>
     <div class="skills-row">
-      <div class="skill-line"><span class="skill-label">Languages &amp; frameworks</span><span class="skill-val">Ruby, Ruby on Rails, JavaScript (Vue.js, React), HTML/CSS</span></div>
+      <div class="skill-line"><span class="skill-label">Languages &amp; frameworks</span><span class="skill-val">Ruby, Go, Ruby on Rails, JavaScript (Vue.js, React), HTML/CSS</span></div>
       <div class="skill-line"><span class="skill-label">Databases &amp; storage</span><span class="skill-val">PostgreSQL, MongoDB, Redis, Elasticsearch</span></div>
       <div class="skill-line"><span class="skill-label">Infrastructure &amp; tools</span><span class="skill-val">AWS, Docker, NGINX, GitLab/GitHub CI/CD, RabbitMQ, Sidekiq, Capistrano</span></div>
       <div class="skill-line"><span class="skill-label">APIs &amp; protocols</span><span class="skill-val">REST, GraphQL, JSON-RPC, SOAP, Action Cable, WebSockets</span></div>
@@ -75,15 +75,18 @@
 
     <div class="job">
       <div class="job-header">
-        <div><p class="job-title">Software Engineer</p><p class="job-meta">The Access Group · via Gotoinc · UK, Remote</p></div>
+        <div><p class="job-title">Senior Software Engineer</p><p class="job-meta">The Access Group · (via Gotoinc) · UK, Remote</p></div>
         <p class="job-date">Aug 2024 – Present</p>
       </div>
       <ul class="job-bullets">
-        <li>Managed Capistrano deployments across a 4-server AWS infrastructure with role-separated nodes: web, webhooks, and Sidekiq worker, each with tuned Puma configurations.</li>
-        <li>Improved test coverage in a large-scale Rails codebase (1,240+ files, 31,500+ lines) with unit, integration, and system specs.</li>
-        <li>Optimized SQL queries 28× for enhanced performance; resolved N+1 patterns using EXPLAIN ANALYZE, reducing p95 response times on high-traffic endpoints.</li>
-        <li>Contributed to Rails and Vue.js major version migration strategies, analyzing breaking changes and coordinating incremental rollout.</li>
-        <li>Reviewed 400+ pull requests including critical Rails and Vue.js major version migrations.</li>
+        <li>Managed Capistrano deployments across a 4-server AWS infrastructure with role-separated nodes: web, webhooks, and Sidekiq worker, each with tuned Puma worker configurations per workload type.</li>
+        <li>Migrated search infrastructure from Algolia to self-hosted Elasticsearch, reducing monthly costs by $1,500 while maintaining search performance and improving query flexibility.</li>
+        <li>Improved data preprocessing workflows (caching, batching), resulting in a 10 % reduction in processing time.</li>
+        <li>Identified and resolved N+1 patterns and rewrote critical queries using EXPLAIN ANALYZE, achieving up to 28x performance improvement on high-traffic endpoints.</li>
+        <li>Developed custom algorithms to import and synchronize client data between different product parts across a multi-tenant SaaS platform, optimizing data management.</li>
+        <li>Contributed to Rails and Vue.js major version migration strategies, analyzing breaking changes and coordinating incremental rollout to minimize regression risk across the codebase.</li>
+        <li>Implemented Flipper feature toggles to enable safe, incremental feature rollouts across a multi-tenant enterprise platform, minimizing regression risk during major version migrations.</li>
+        <li>Reviewed 400+ pull requests, enforcing code quality and catching regressions across the codebase.</li>
       </ul>
     </div>
 
@@ -93,11 +96,15 @@
         <p class="job-date">May 2022 – Aug 2024</p>
       </div>
       <ul class="job-bullets">
-        <li>Designed and developed a secure peer-to-peer transaction system (Machnet, Stripe, PayPal).</li>
-        <li>Resolved a critical race condition by implementing database-level locking, preventing data inconsistencies and revenue loss.</li>
-        <li>Developed a chat microservice using Action Cable and Sidekiq for real-time communication.</li>
-        <li>Implemented GitLab CI/CD pipelines, resulting in a 25% increase in team performance.</li>
-      </ul>
+        <li>Designed and developed a robust and secure peer-to-peer (P2P) transaction system to facilitate direct transfers between users (Machnet, Stripe, PayPal).</li>
+        <li>Identified and resolved server issues, specifically targeting performance bottlenecks, to minimize downtime and disruptions to testing activities, resulting in a significant 25 % increase in team performance.</li>
+        <li>Participated in interview panels and debrief meetings to share insights, evaluate candidates’ qualifications, and make hiring recommendations.</li>
+        <li>Designed and implemented automated build, test, and deployment pipelines using GitLab CI/CD.</li>
+        <li>Monitored application performance and errors with Datadog and Sentry, tracking down bottlenecks and fixing them through query optimization and code refactoring.</li>
+        <li>Developed a chat microservice using Action Cable and Sidekiq, allowing real-time communication between users.</li>
+        <li>Resolved a critical race condition issue by implementing database-level locking, which was causing data inconsistencies and potential revenue loss.</li>
+        <li>Contributed to decomposing a monolithic payment application into independent services, isolating domain logic for P2P transfers, chat, and notification systems to improve scalability and maintainability.</li>
+        </ul>
     </div>
 
     <div class="job">
@@ -105,10 +112,14 @@
         <div><p class="job-title">Software Engineer</p><p class="job-meta">upaytravels · US, Remote</p></div>
       </div>
       <ul class="job-bullets">
-        <li>Designed CRM system architecture for internal use by airline operators.</li>
-        <li>Containerized the application using Docker; applied rate limiting and IP blacklisting for security.</li>
-        <li>Used Redis to cache frequently accessed data and improve performance.</li>
-      </ul>
+        <li>Managed and led a 3-person team building the Upay Travels CRM, handled task distribution, code reviews, and delivery.</li>
+        <li>Designed and developed the CRM system architecture tailored for internal use by airline operators, focusing on scalability and user efficiency.</li>
+        <li>Created an admin dashboard to monitor key metrics and performance indicators, providing real-time insights into system performance and operational efficiency.</li>
+        <li>Designed and implemented frontend functionalities using HTML/CSS/JS to ensure an intuitive and responsive user interface.</li>
+        <li>Containerized the application using Docker, facilitating consistent development and production environments.</li>
+        <li>Applied rate limiting and IP blacklisting to mitigate abuse, safeguard application integrity, and protect against common attacks.</li>
+        <li>Mentored junior developers, providing guidance on best practices and helping them grow professionally.</li>
+        </ul>
     </div>
 
     <div class="job">
@@ -117,10 +128,27 @@
         <p class="job-date">Sep 2021 – Apr 2022</p>
       </div>
       <ul class="job-bullets">
-        <li>Led development of MVP for an online travel agency serving 15,000+ users.</li>
-        <li>Integrated 3 payment systems using REST, JSON-RPC and SOAP protocols.</li>
-        <li>Developed REST API for a mobile application that increased bookings by 25%.</li>
-        <li>Upgraded Rails 6.x to 7.x; optimized SQL queries, improving page loading times by 30%.</li>
+        <li>Led the development and maintenance of the MVP for a comprehensive online travel agency currently serving over 15,000 users.</li>
+        <li>Integrated three payment systems using REST, JSON-RPC, and SOAP protocols, with comprehensive unit test coverage.</li>
+        <li>Developed REST APIs for a new mobile application, increasing bookings by 25%.</li>
+        <li>Upgraded the application from Rails 6.x to Rails 7.x.</li>
+        <li>Optimized complex SQL and ActiveRecord queries for analytics and reporting, eliminating N+1 issues and improving page load times by 30%.</li>
+        <li>Worked extensively with Ruby on Rails, Git, Linux, Docker, object-oriented programming, and relational databases.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div><p class="job-title">Software Engineer</p><p class="job-meta">DK-KLUB / EduCRM· US, Remote</p></div>
+        <p class="job-date">Apr 2020 – Sep 2021</p>
+      </div>
+      <ul class="job-bullets">
+        <li>Designed and maintained a multi-tenant SaaS CRM for educational centers, featuring isolated tenant data and configurable business workflows.</li>
+        <li>Built core academic modules for admissions, enrollment, course management, class scheduling, attendance tracking, and grading.</li>
+        <li>Developed a comprehensive tuition management system, including invoicing, payment tracking, discounts, debt management, and financial reporting.</li>
+        <li>Implemented fine-grained role-based access control (RBAC) and RESTful APIs, integrating third-party SMS and email notification services.</li>
+        <li>Automated recurring workflows such as notifications, report generation, and scheduled jobs with Sidekiq, while optimizing PostgreSQL queries to improve performance for high-traffic operations.</li>
+        <li>Built reporting dashboards for student performance, attendance, and revenue metrics, supported by comprehensive RSpec test coverage and CI/CD pipelines.</li>
       </ul>
     </div>
   </div>
@@ -129,7 +157,6 @@
     <p class="section-title">Education</p>
     <div class="edu-row">
       <div><p class="edu-title">Tashkent University of Information Technologies</p><p class="edu-sub">Bachelor of Arts in Computer Science</p></div>
-      <p class="edu-date">Sep 2018 – Jun 2022</p>
     </div>
   </div>
 
